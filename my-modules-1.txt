@@ -1,0 +1,80 @@
+Module                  Size  Used by
+nls_utf8               16384  1
+isofs                  49152  1
+rfcomm                 86016  16
+devlink                77824  0
+nf_conntrack_netbios_ns    16384  1
+nf_conntrack_broadcast    16384  1 nf_conntrack_netbios_ns
+xt_CT                  16384  1
+ip6t_rpfilter          16384  1
+ip6t_REJECT            16384  2
+nf_reject_ipv6         20480  1 ip6t_REJECT
+xt_conntrack           16384  21
+fuse                  131072  4
+ebtable_nat            16384  1
+ip6table_nat           16384  1
+nf_nat_ipv6            16384  1 ip6table_nat
+ip6table_mangle        16384  1
+ip6table_raw           16384  1
+ip6table_security      16384  1
+iptable_nat            16384  1
+nf_nat_ipv4            16384  1 iptable_nat
+nf_nat                 40960  2 nf_nat_ipv6,nf_nat_ipv4
+iptable_mangle         16384  1
+iptable_raw            16384  1
+iptable_security       16384  1
+nf_conntrack          155648  7 xt_conntrack,nf_nat,nf_nat_ipv6,nf_conntrack_netbios_ns,nf_nat_ipv4,nf_conntrack_broadcast,xt_CT
+nf_defrag_ipv6         24576  1 nf_conntrack
+nf_defrag_ipv4         16384  1 nf_conntrack
+libcrc32c              16384  2 nf_conntrack,nf_nat
+ip_set                 49152  0
+nfnetlink              16384  1 ip_set
+ebtable_filter         16384  1
+ebtables               40960  2 ebtable_nat,ebtable_filter
+ip6table_filter        16384  1
+ip6_tables             32768  7 ip6table_filter,ip6table_raw,ip6table_nat,ip6table_mangle,ip6table_security
+vmw_vsock_vmci_transport    32768  2
+vsock                  40960  3 vmw_vsock_vmci_transport
+bnep                   28672  2
+sunrpc                425984  1
+snd_seq_midi           20480  0
+snd_seq_midi_event     16384  1 snd_seq_midi
+btusb                  57344  0
+btrtl                  20480  1 btusb
+crct10dif_pclmul       16384  1
+btbcm                  16384  1 btusb
+crc32_pclmul           16384  0
+btintel                28672  1 btusb
+ghash_clmulni_intel    16384  0
+bluetooth             614400  37 btrtl,btintel,btbcm,bnep,btusb,rfcomm
+snd_ens1371            32768  5
+snd_ac97_codec        147456  1 snd_ens1371
+vmw_balloon            24576  0
+intel_rapl_perf        16384  0
+gameport               16384  1 snd_ens1371
+ac97_bus               16384  1 snd_ac97_codec
+snd_rawmidi            45056  2 snd_seq_midi,snd_ens1371
+snd_seq                86016  2 snd_seq_midi,snd_seq_midi_event
+joydev                 28672  0
+snd_seq_device         16384  3 snd_seq,snd_seq_midi,snd_rawmidi
+snd_pcm               118784  2 snd_ac97_codec,snd_ens1371
+ecdh_generic           24576  1 bluetooth
+rfkill                 28672  6 bluetooth
+snd_timer              40960  2 snd_seq,snd_pcm
+snd                    94208  17 snd_seq,snd_seq_device,snd_timer,snd_ac97_codec,snd_pcm,snd_rawmidi,snd_ens1371
+soundcore              16384  1 snd
+vmw_vmci               81920  2 vmw_balloon,vmw_vsock_vmci_transport
+i2c_piix4              28672  0
+vmwgfx                344064  21
+drm_kms_helper        208896  1 vmwgfx
+ttm                   114688  1 vmwgfx
+drm                   495616  24 vmwgfx,drm_kms_helper,ttm
+crc32c_intel           24576  5
+mptspi                 28672  2
+scsi_transport_spi     36864  1 mptspi
+serio_raw              20480  0
+e1000                 151552  0
+mptscsih               45056  1 mptspi
+mptbase                98304  2 mptspi,mptscsih
+ata_generic            16384  0
+pata_acpi              16384  0
